@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Transform your child's confidence in just 7 days! Join Scoreazy's expert-led microcourse for Grades 3–5. Live sessions, interactive activities, and personalized mentoring." />
+  <meta name="keywords" content="confidence building course, kids self-esteem, Grade 3 to 5, student confidence, child development, communication skills, Scoreazy microcourse" />
+  <meta name="author" content="Scoreazy" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="7-Day Confidence Building Course for Grades 3–5 | Scoreazy" />
+  <meta property="og:description" content="Help your child speak up and shine with our expert-led confidence building microcourse" />
+  <meta property="og:type" content="website" />
+  <title>Scoreazy Microcourse</title>
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+      color: #1a1a1a;
+      overflow-x: hidden;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+      animation: float 20s infinite linear;
+    }
+    
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0px); }
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      animation: fadeInUp 1s ease-out;
+    }
+    
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .hero h1 {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+    }
+    
+    .hero .subtitle {
+      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+      margin-bottom: 2rem;
+      opacity: 0.95;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .course-badge {
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 0.5rem 1rem;
+      border-radius: 50px;
+      display: inline-block;
+      margin-bottom: 2rem;
+      font-weight: 600;
+      animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+    
+    .cta-button {
+      background: linear-gradient(45deg, #ff6b6b, #ff8e53);
+      color: white;
+      padding: 1rem 2.5rem;
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 50px;
+      display: inline-block;
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 30px rgba(255, 107, 107, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .cta-button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.5s;
+    }
+    
+    .cta-button:hover::before {
+      left: 100%;
+    }
+    
+    .cta-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 40px rgba(255, 107, 107, 0.4);
+    }
+    
+    /* Course Stats */
+    .stats {
+      background: white;
+      padding: 3rem 0;
+      box-shadow: 0 -10px 30px rgba(0,0,0,0.1);
+    }
+    
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      text-align: center;
+    }
+    
+    .stat-item {
+      padding: 1.5rem;
+      background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+      border-radius: 20px;
+      transition: transform 0.3s ease;
+    }
+    
+    .stat-item:hover {
+      transform: translateY(-5px);
+    }
+    
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: #667eea;
+      display: block;
+    }
+    
+    .stat-label {
+      color: #64748b;
+      font-weight: 600;
+      margin-top: 0.5rem;
+    }
+    
+    /* Benefits Section */
+    .benefits {
+      padding: 5rem 0;
+      background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+    }
+    
+    .section-title {
+      text-align: center;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      margin-bottom: 3rem;
+      color: #1e293b;
+    }
+    
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    
+    .benefit-card {
+      background: white;
+      padding: 2.5rem;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .benefit-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, #667eea, #764ba2);
+    }
+    
+    .benefit-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+    
+    .benefit-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      display: block;
+    }
+    
+    .benefit-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: #1e293b;
+    }
+    
+    .benefit-description {
+      color: #64748b;
+      line-height: 1.6;
+    }
+    
+    /* How It Works */
+    .how-it-works {
+      padding: 5rem 0;
+      background: white;
+    }
+    
+    .steps-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 3rem;
+      margin-top: 3rem;
+    }
+    
+    .step {
+      text-align: center;
+      position: relative;
+    }
+    
+    .step-number {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      font-weight: 800;
+      margin: 0 auto 1.5rem;
+      position: relative;
+      z-index: 2;
+    }
+    
+    .step-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: #1e293b;
+    }
+    
+    .step-description {
+      color: #64748b;
+      line-height: 1.6;
+    }
+    
+    /* Testimonials */
+    .testimonials {
+      padding: 5rem 0;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+    }
+    
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    
+    .testimonial {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 2rem;
+      border-radius: 20px;
+      transition: transform 0.3s ease;
+    }
+    
+    .testimonial:hover {
+      transform: translateY(-5px);
+    }
+    
+    .testimonial-text {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+      font-style: italic;
+      line-height: 1.6;
+    }
+    
+    .testimonial-author {
+      font-weight: 700;
+      opacity: 0.9;
+    }
+    
+    /* FAQ Section */
+    .faqs {
+      padding: 5rem 0;
+      background: #f8fafc;
+    }
+    
+    .faq-container {
+      max-width: 800px;
+      margin: 3rem auto 0;
+    }
+    
+    .faq-item {
+      background: white;
+      margin-bottom: 1rem;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    }
+    
+    .faq-question {
+      padding: 1.5rem;
+      font-weight: 700;
+      color: #1e293b;
+      cursor: pointer;
+      display: flex;
+      justify-content: between;
+      align-items: center;
+      transition: background 0.3s ease;
+    }
+    
+    .faq-question:hover {
+      background: #f1f5f9;
+    }
+    
+    .faq-answer {
+      padding: 0 1.5rem 1.5rem;
+      color: #64748b;
+      line-height: 1.6;
+    }
+    
+    /* Final CTA */
+    .final-cta {
+      padding: 5rem 0;
+      background: linear-gradient(135deg, #ff6b6b 0%, #ff8e53 100%);
+      color: white;
+      text-align: center;
+    }
+    
+    .final-cta h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+    }
+    
+    .final-cta .subtitle {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      opacity: 0.95;
+    }
+    
+    .cta-button-white {
+      background: white;
+      color: #ff6b6b;
+      padding: 1rem 2.5rem;
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 50px;
+      display: inline-block;
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    
+    .cta-button-white:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    }
+    
+    /* Footer */
+    footer {
+      background: #1e293b;
+      color: white;
+      text-align: center;
+      padding: 2rem 0;
+    }
+    
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    
+    .footer-links {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    
+    .footer-links a {
+      color: #94a3b8;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    
+    .footer-links a:hover {
+      color: white;
+    }
+    
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+      .hero {
+        min-height: 80vh;
+        padding: 2rem 0;
+      }
+      
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+      }
+      
+      .benefits-grid,
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .steps-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      
+      .footer-content {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .container {
+        padding: 0 15px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .cta-button,
+      .cta-button-white {
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="course-badge">🌟 7-Day Microcourse for Grades 3–5</div>
+        <h1>Transform Your Child's Confidence in Just One Week!</h1>
+        <p class="subtitle">Expert-led live sessions, interactive activities, and personalized mentoring to help your child speak up, stand tall, and shine bright.</p>
+        <a href="#enroll" class="cta-button">Start Their Journey Today</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Stats -->
+  <section class="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <span class="stat-number">7</span>
+          <div class="stat-label">Days to Confidence</div>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">30</span>
+          <div class="stat-label">Minutes Daily</div>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">500+</span>
+          <div class="stat-label">Happy Students</div>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">98%</span>
+          <div class="stat-label">Parent Satisfaction</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="benefits">
+    <div class="container">
+      <h2 class="section-title">Why Choose Our Confidence Course?</h2>
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <span class="benefit-icon">🎯</span>
+          <h3 class="benefit-title">Age-Appropriate Learning</h3>
+          <p class="benefit-description">Specially designed curriculum for Grades 3–5, focusing on developmental milestones and age-specific confidence challenges.</p>
+        </div>
+        <div class="benefit-card">
+          <span class="benefit-icon">👨‍🏫</span>
+          <h3 class="benefit-title">Expert Mentors</h3>
+          <p class="benefit-description">Trained child psychologists and education specialists guide each session with proven confidence-building techniques.</p>
+        </div>
+        <div class="benefit-card">
+          <span class="benefit-icon">🎮</span>
+          <h3 class="benefit-title">Interactive & Fun</h3>
+          <p class="benefit-description">Engaging worksheets, games, and activities that make learning enjoyable while building essential life skills.</p>
+        </div>
+        <div class="benefit-card">
+          <span class="benefit-icon">📊</span>
+          <h3 class="benefit-title">Personalized Feedback</h3>
+          <p class="benefit-description">Individual attention and customized guidance to help your child overcome specific confidence barriers.</p>
+        </div>
+        <div class="benefit-card">
+          <span class="benefit-icon">🏆</span>
+          <h3 class="benefit-title">Proven Results</h3>
+          <p class="benefit-description">Evidence-based methods with measurable improvements in self-expression and classroom participation.</p>
+        </div>
+        <div class="benefit-card">
+          <span class="benefit-icon">📱</span>
+          <h3 class="benefit-title">Flexible Learning</h3>
+          <p class="benefit-description">Live sessions with recorded backup, progress tracking, and family involvement tools for continued support.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="how-it-works">
+    <div class="container">
+      <h2 class="section-title">How It Works</h2>
+      <div class="steps-container">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3 class="step-title">Daily Live Sessions</h3>
+          <p class="step-description">Join our expert mentors for 30-minute interactive sessions filled with confidence-building activities and peer interaction.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3 class="step-title">Practice & Play</h3>
+          <p class="step-description">Complete fun worksheets and challenge activities designed to reinforce learning and build practical confidence skills.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3 class="step-title">Track Progress</h3>
+          <p class="step-description">Receive personalized feedback, celebrate achievements, and earn a certificate of completion to recognize growth.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <div class="container">
+      <h2 class="section-title">What Parents Are Saying</h2>
+      <div class="testimonials-grid">
+        <div class="testimonial">
+          <p class="testimonial-text">"My son was so shy he wouldn't even raise his hand in class. After just one week with Scoreazy, he's presenting projects and making new friends. It's incredible!"</p>
+          <div class="testimonial-author">– Neha Sharma, Parent of Grade 4 Student</div>
+        </div>
+        <div class="testimonial">
+          <p class="testimonial-text">"The mentors are amazing with kids. They made confidence-building feel like a game, and my daughter couldn't wait for each session. Highly recommend!"</p>
+          <div class="testimonial-author">– Rahul Verma, Parent of Grade 3 Student</div>
+        </div>
+        <div class="testimonial">
+          <p class="testimonial-text">"As a working parent, the flexible timings and recorded sessions were perfect. My child gained confidence while I could still be involved in the process."</p>
+          <div class="testimonial-author">– Priya Patel, Parent of Grade 5 Student</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faqs">
+    <div class="container">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <div class="faq-container">
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>Who is this course perfect for?</span>
+            <span>+</span>
+          </div>
+          <div class="faq-answer" style="display: none;">
+            Students in Grades 3–5 who want to build confidence, improve communication skills, overcome shyness, or develop better self-expression abilities.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>Are the sessions live or pre-recorded?</span>
+            <span>+</span>
+          </div>
+          <div class="faq-answer" style="display: none;">
+            All sessions are conducted live with our expert mentors for real-time interaction. However, recordings are provided for review and makeup sessions.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>What if my child misses a session?</span>
+            <span>+</span>
+          </div>
+          <div class="faq-answer" style="display: none;">
+            No worries! All sessions are recorded and available for 30 days. We also offer makeup sessions and one-on-one support when needed.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>Will my child receive a certificate?</span>
+            <span>+</span>
+          </div>
+          <div class="faq-answer" style="display: none;">
+            Yes! Every student who completes the course receives a personalized digital certificate recognizing their achievement and growth.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>How do you measure progress?</span>
+            <span>+</span>
+          </div>
+          <div class="faq-answer" style="display: none;">
+            We use pre and post-course assessments, daily participation tracking, and provide detailed progress reports to parents showing confidence improvements.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="final-cta" id="enroll">
+    <div class="container">
+      <h2>Ready to Watch Your Child Shine?</h2>
+      <p class="subtitle">Join hundreds of families who've already transformed their child's confidence with Scoreazy</p>
+      <a href="#" class="cta-button-white">Enroll Now - Limited Seats Available</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div>
+          <p>&copy; 2025 Scoreazy. All rights reserved.</p>
+        </div>
+        <div class="footer-links">
+          <a href="#">About Us</a>
+          <a href="#">Contact</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleFaq(element) {
+      const answer = element.nextElementSibling;
+      const icon = element.querySelector('span:last-child');
+      
+      if (answer.style.display === 'none' || answer.style.display === '') {
+        answer.style.display = 'block';
+        icon.textContent = '−';
+      } else {
+        answer.style.display = 'none';
+        icon.textContent = '+';
+      }
+    }
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Add scroll animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+
+    // Observe elements for animation
+    document.querySelectorAll('.benefit-card, .step, .testimonial, .stat-item').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(20px)';
+      el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
